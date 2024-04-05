@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../flutter_painter.dart';
 import '../drawables/shape/line_dashed_drawable.dart';
+import 'shape_factory.dart';
 
 /// A [DashedLineDrawable] factory.
 class DashedLineFactory extends ShapeFactory<DashedLineDrawable> {
