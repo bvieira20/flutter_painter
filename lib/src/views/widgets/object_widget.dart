@@ -223,7 +223,8 @@ class _ObjectWidgetState extends State<_ObjectWidget> {
                                                             selectedBorderWidth),
                                                     boxShadow: [
                                                       BorderBoxShadow(
-                                                        color: Colors.black,
+                                                        color:
+                                                            Colors.transparent,
                                                         blurRadius:
                                                             selectedBlurRadius,
                                                       )
@@ -526,7 +527,7 @@ class _ObjectWidgetState extends State<_ObjectWidget> {
           //             ),
           //             boxShadow: [
           //               BorderBoxShadow(
-          //                 color: Colors.black,
+          //                 color: Colors.red,
           //                 blurRadius: 1,
           //               )
           //             ]
@@ -1043,7 +1044,7 @@ class _ObjectControlBox extends StatelessWidget {
   final Color? activeColor;
 
   /// Color of the shadow surrounding the control.
-  /// Defaults to [Colors.black].
+  /// Defaults to [Colors.red].
   final Color shadowColor;
 
   /// Creates an [_ObjectControlBox] with the given [shape] and [active].
@@ -1062,7 +1063,7 @@ class _ObjectControlBox extends StatelessWidget {
   Widget build(BuildContext context) {
     ThemeData? theme = Theme.of(context);
     if (theme == ThemeData.fallback()) theme = null;
-    final activeColor = this.activeColor ?? theme?.accentColor ?? Colors.blue;
+    final activeColor = this.activeColor ?? theme?.hintColor ?? Colors.blue;
     return AnimatedContainer(
       duration: _ObjectWidgetState.controlsTransitionDuration,
       decoration: BoxDecoration(
